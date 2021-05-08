@@ -42,7 +42,7 @@ public class MySqlDbConf {
     ) {
         return builder
                 .dataSource(dataSource)
-                .packages("com.foobar.foo.domain")
+                .packages("com.example.assignment3.mySql")
                 .persistenceUnit("foo")
                 .build();
     }

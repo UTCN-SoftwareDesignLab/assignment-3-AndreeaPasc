@@ -45,7 +45,7 @@ public class PostgresDbConf {
         return
                 builder
                         .dataSource(dataSource)
-                        .packages("com.foobar.bar.domain")
+                        .packages("com.example.assignment3.postgres")
                         .persistenceUnit("bar")
                         .build();
     }

@@ -1,6 +1,6 @@
-package com.lab4.demo.security;
+package com.example.assignment3.security;
 
-import com.lab4.demo.user.UserDetailsServiceImpl;
+import com.example.assignment3.postgres.users.service.UserDetailsServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

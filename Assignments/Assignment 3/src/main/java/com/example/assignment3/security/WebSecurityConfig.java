@@ -1,4 +1,4 @@
-package com.lab4.demo.security;
+package com.example.assignment3.security;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
@@ -18,7 +18,7 @@ import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
-import static com.lab4.demo.UrlMapping.AUTH;
+import static com.example.assignment3.UrlMapping.AUTH;
 
 @Configuration
 @EnableWebSecurity

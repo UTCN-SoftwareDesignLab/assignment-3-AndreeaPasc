@@ -1,4 +1,4 @@
-package com.lab4.demo.security.dto;
+package com.example.assignment3.security.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

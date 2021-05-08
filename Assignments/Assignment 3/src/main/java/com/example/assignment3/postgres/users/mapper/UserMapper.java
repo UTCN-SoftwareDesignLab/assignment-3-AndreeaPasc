@@ -1,10 +1,8 @@
-package com.example.assignment3.mySql.users.mapper;
+package com.example.assignment3.postgres.users.mapper;
 
-import com.example.assignment3.mySql.patients.model.Patient;
-import com.example.assignment3.mySql.patients.model.dto.PatientDto;
-import com.example.assignment3.mySql.users.dto.UserListDTO;
-import com.example.assignment3.mySql.users.dto.UserMinimalDTO;
-import com.example.assignment3.mySql.users.model.User;
+import com.example.assignment3.postgres.users.dto.UserListDTO;
+import com.example.assignment3.postgres.users.dto.UserMinimalDTO;
+import com.example.assignment3.postgres.users.model.User;
 import org.mapstruct.*;
 
 import java.util.stream.Collectors;
@@ -13,12 +11,12 @@ import java.util.stream.Collectors;
 public interface UserMapper {
 
     @Mappings({
-            @Mapping(target = "name", source = "user.username")
+            @Mapping(target = "username", source = "user.username")
     })
     UserMinimalDTO userMinimalFromUser(User user);
 
     @Mappings({
-            @Mapping(target = "name", source = "user.username"),
+            @Mapping(target = "username", source = "user.username"),
             @Mapping(target = "roles", ignore = true)
     })
     UserListDTO userListDtoFromUser(User user);

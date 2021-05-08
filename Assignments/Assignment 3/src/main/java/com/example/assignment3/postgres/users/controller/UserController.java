@@ -1,9 +1,8 @@
-package com.example.assignment3.mySql.users.controller;
+package com.example.assignment3.postgres.users.controller;
 
-import com.example.assignment3.mySql.patients.model.dto.PatientDto;
-import com.example.assignment3.mySql.users.dto.UserMinimalDTO;
-import com.example.assignment3.mySql.users.service.UserService;
-import com.example.assignment3.mySql.users.dto.UserListDTO;
+import com.example.assignment3.postgres.users.dto.UserMinimalDTO;
+import com.example.assignment3.postgres.users.service.UserService;
+import com.example.assignment3.postgres.users.dto.UserListDTO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 

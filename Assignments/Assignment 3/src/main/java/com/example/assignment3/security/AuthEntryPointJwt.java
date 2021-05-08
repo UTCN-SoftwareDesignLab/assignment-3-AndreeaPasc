@@ -1,4 +1,4 @@
-package com.lab4.demo.security;
+package com.example.assignment3.security;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

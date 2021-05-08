@@ -1,8 +1,8 @@
-package com.example.assignment3.mySql.users.service;
+package com.example.assignment3.postgres.users.service;
 
-import com.example.assignment3.mySql.users.repository.UserRepository;
-import com.example.assignment3.mySql.users.dto.UserDetailsImpl;
-import com.example.assignment3.mySql.users.model.User;
+import com.example.assignment3.postgres.users.repository.UserRepository;
+import com.example.assignment3.postgres.users.dto.UserDetailsImpl;
+import com.example.assignment3.postgres.users.model.User;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

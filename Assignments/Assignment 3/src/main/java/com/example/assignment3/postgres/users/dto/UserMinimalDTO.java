@@ -1,4 +1,4 @@
-package com.example.assignment3.mySql.users.dto;
+package com.example.assignment3.postgres.users.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

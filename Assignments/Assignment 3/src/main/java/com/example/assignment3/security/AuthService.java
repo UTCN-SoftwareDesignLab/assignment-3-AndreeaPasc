@@ -1,11 +1,11 @@
-package com.lab4.demo.security;
+package com.example.assignment3.security;
 
-import com.lab4.demo.security.dto.SignupRequest;
-import com.lab4.demo.user.RoleRepository;
-import com.lab4.demo.user.UserRepository;
-import com.lab4.demo.user.model.ERole;
-import com.lab4.demo.user.model.Role;
-import com.lab4.demo.user.model.User;
+import com.example.assignment3.postgres.users.repository.RoleRepository;
+import com.example.assignment3.postgres.users.repository.UserRepository;
+import com.example.assignment3.postgres.users.model.ERole;
+import com.example.assignment3.postgres.users.model.Role;
+import com.example.assignment3.postgres.users.model.User;
+import com.example.assignment3.security.dto.SignupRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
@@ -43,7 +43,7 @@ public class AuthService {
         Set<Role> roles = new HashSet<>();
 
         if (rolesStr == null) {
-            Role defaultRole = roleRepository.findByName(ERole.CUSTOMER)
+            Role defaultRole = roleRepository.findByName(ERole.SECRETARY)
                     .orElseThrow(() -> new RuntimeException("Cannot find CUSTOMER role"));
             roles.add(defaultRole);
         } else {

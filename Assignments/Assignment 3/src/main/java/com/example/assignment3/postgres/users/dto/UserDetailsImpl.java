@@ -1,6 +1,6 @@
-package com.example.assignment3.mySql.users.dto;
+package com.example.assignment3.postgres.users.dto;
 
-import com.example.assignment3.mySql.users.model.User;
+import com.example.assignment3.postgres.users.model.User;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import org.springframework.security.core.GrantedAuthority;

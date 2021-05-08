@@ -1,10 +1,10 @@
-package com.example.assignment3.mySql.users.service;
+package com.example.assignment3.postgres.users.service;
 
-import com.example.assignment3.mySql.users.model.User;
-import com.example.assignment3.mySql.users.repository.UserRepository;
-import com.example.assignment3.mySql.users.dto.UserListDTO;
-import com.example.assignment3.mySql.users.dto.UserMinimalDTO;
-import com.example.assignment3.mySql.users.mapper.UserMapper;
+import com.example.assignment3.postgres.users.model.User;
+import com.example.assignment3.postgres.users.repository.UserRepository;
+import com.example.assignment3.postgres.users.dto.UserListDTO;
+import com.example.assignment3.postgres.users.dto.UserMinimalDTO;
+import com.example.assignment3.postgres.users.mapper.UserMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -24,6 +24,7 @@ public class UserService {
         return userRepository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("User not found: " + id));
     }
+
 
     public List<UserMinimalDTO> allUsersMinimal() {
         return userRepository.findAll()

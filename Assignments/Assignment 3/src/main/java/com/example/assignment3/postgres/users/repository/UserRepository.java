@@ -1,6 +1,6 @@
-package com.example.assignment3.mySql.users.repository;
+package com.example.assignment3.postgres.users.repository;
 
-import com.example.assignment3.mySql.users.model.User;
+import com.example.assignment3.postgres.users.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

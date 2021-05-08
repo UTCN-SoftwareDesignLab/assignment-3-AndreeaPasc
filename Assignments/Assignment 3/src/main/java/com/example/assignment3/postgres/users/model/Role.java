@@ -1,4 +1,4 @@
-package com.example.assignment3.mySql.users.model;
+package com.example.assignment3.postgres.users.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -12,6 +12,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @Builder
 @Data
+@Table(schema = "users")
 public class Role {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -1,6 +1,6 @@
-package com.lab4.demo.security;
+package com.example.assignment3.security;
 
-import com.lab4.demo.user.dto.UserDetailsImpl;
+import com.example.assignment3.postgres.users.dto.UserDetailsImpl;
 import io.jsonwebtoken.*;
 import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;

@@ -1,10 +1,10 @@
-package com.lab4.demo.security;
+package com.example.assignment3.security;
 
-import com.lab4.demo.security.dto.JwtResponse;
-import com.lab4.demo.security.dto.LoginRequest;
-import com.lab4.demo.security.dto.MessageResponse;
-import com.lab4.demo.security.dto.SignupRequest;
-import com.lab4.demo.user.dto.UserDetailsImpl;
+import com.example.assignment3.postgres.users.dto.UserDetailsImpl;
+import com.example.assignment3.security.dto.JwtResponse;
+import com.example.assignment3.security.dto.LoginRequest;
+import com.example.assignment3.security.dto.MessageResponse;
+import com.example.assignment3.security.dto.SignupRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -18,7 +18,7 @@ import javax.validation.Valid;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static com.lab4.demo.UrlMapping.*;
+import static com.example.assignment3.UrlMapping.*;
 
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
@@ -70,7 +70,6 @@ public class AuthController {
         }
 
         authService.register(signUpRequest);
-
 
         return ResponseEntity.ok(new MessageResponse("User registered successfully!"));
     }

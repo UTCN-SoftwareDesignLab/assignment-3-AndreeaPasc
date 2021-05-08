@@ -1,4 +1,4 @@
-package com.example.assignment3.mySql.users.model;
+package com.example.assignment3.postgres.users.model;
 
 public enum ERole {
     DOCTOR,

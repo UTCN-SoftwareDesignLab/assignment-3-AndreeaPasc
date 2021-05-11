@@ -1,6 +1,5 @@
 package com.example.assignment3.mySql;
 
-
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.jdbc.DataSourceBuilder;
@@ -8,7 +7,6 @@ import org.springframework.boot.orm.jpa.EntityManagerFactoryBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
-import org.springframework.context.annotation.PropertySource;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
@@ -22,7 +20,7 @@ import javax.sql.DataSource;
 @EnableTransactionManagement
 @EnableJpaRepositories(
         entityManagerFactoryRef = "entityManagerFactory",
-        basePackages = { "com.example.assignment3.mySql" }
+        basePackages = { "com.example.assignment3.mySql.consultations.repository", "com.example.assignment3.mySql.patients.repository" }
 )
 public class MySqlDbConf {
 
@@ -42,7 +40,7 @@ public class MySqlDbConf {
     ) {
         return builder
                 .dataSource(dataSource)
-                .packages("com.example.assignment3.mySql")
+                .packages("com.example.assignment3.mySql.consultations.model", "com.example.assignment3.mySql.patients.model")
                 .persistenceUnit("foo")
                 .build();
     }

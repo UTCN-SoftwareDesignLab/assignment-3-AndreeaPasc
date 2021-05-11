@@ -19,14 +19,13 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
-import java.util.HashMap;
 
 @Configuration
 @EnableTransactionManagement
 @EnableJpaRepositories(
         entityManagerFactoryRef = "barEntityManagerFactory",
         transactionManagerRef = "barTransactionManager",
-        basePackages = { "com.example.assignment3.postgres" }
+        basePackages = { "com.example.assignment3.postgres.users.repository" }
 )
 public class PostgresDbConf {
 
@@ -45,7 +44,7 @@ public class PostgresDbConf {
         return
                 builder
                         .dataSource(dataSource)
-                        .packages("com.example.assignment3.postgres")
+                        .packages("com.example.assignment3.postgres.users.model")
                         .persistenceUnit("bar")
                         .build();
     }

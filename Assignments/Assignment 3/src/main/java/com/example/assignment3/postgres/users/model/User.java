@@ -3,6 +3,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
+import org.mapstruct.ap.internal.model.GeneratedType;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
@@ -10,7 +11,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Entity
-@Table(schema = "users",
+@Table(name = "user", schema = "users",
         uniqueConstraints = {
                 @UniqueConstraint(columnNames = "username"),
                 @UniqueConstraint(columnNames = "email")
@@ -19,20 +20,22 @@ import java.util.Set;
 @AllArgsConstructor
 @Builder
 @Data
+
+
 public class User {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false, length = 20)
+    @Column
     private String username;
 
     @Email
-    @Column(nullable = false, length = 50)
+    @Column
     private String email;
 
-    @Column(nullable = false, length = 120)
+    @Column
     private String password;
 
     @ManyToMany(fetch = FetchType.EAGER)
@@ -41,5 +44,4 @@ public class User {
             inverseJoinColumns = @JoinColumn(name = "role_id"))
     @Builder.Default
     private Set<Role> roles = new HashSet<>();
-
 }

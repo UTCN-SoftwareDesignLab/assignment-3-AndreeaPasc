@@ -21,13 +21,13 @@ public class Patient {
     private String name;
 
     @Column
-    private Long identity_card_no;
+    private Long identityCardNo;
 
     @Column
-    private Long personal_num_code;
+    private Long personalNumCode;
 
     @Column
-    private LocalDate date_of_birth;
+    private LocalDate dateOfBirth;
 
     @Column
     private String address;

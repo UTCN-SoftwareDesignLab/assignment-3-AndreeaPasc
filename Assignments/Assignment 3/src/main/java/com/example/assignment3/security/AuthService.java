@@ -23,7 +23,6 @@ public class AuthService {
 
     private final PasswordEncoder encoder;
 
-
     public boolean existsByUsername(String username) {
         return userRepository.existsByUsername(username);
     }
@@ -44,7 +43,7 @@ public class AuthService {
 
         if (rolesStr == null) {
             Role defaultRole = roleRepository.findByName(ERole.SECRETARY)
-                    .orElseThrow(() -> new RuntimeException("Cannot find CUSTOMER role"));
+                    .orElseThrow(() -> new RuntimeException("Cannot find SECRETARY role"));
             roles.add(defaultRole);
         } else {
             rolesStr.forEach(r -> {

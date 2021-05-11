@@ -14,7 +14,7 @@ import static com.example.assignment3.UrlMapping.ENTITY;
 @RequiredArgsConstructor
 public class ConsultationController {
 
-    private ConsultationService consultationService;
+    private final ConsultationService consultationService;
 
     @PostMapping
     public ConsultationDto create(@RequestBody ConsultationDto consultation){

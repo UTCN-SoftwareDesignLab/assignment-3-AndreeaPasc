@@ -16,8 +16,9 @@ import java.util.List;
 public class ConsultationDto {
 
     private Long id;
-    private Long patientId;
-    private Long doctorId;
-    private List<Integer> consultationHour;
+    private String patientName;
+    private String doctorName;
+    private Integer startHour;
+    private Integer endHour;
 
 }

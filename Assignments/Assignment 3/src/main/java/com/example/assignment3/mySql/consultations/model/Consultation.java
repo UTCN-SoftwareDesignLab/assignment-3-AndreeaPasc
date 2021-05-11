@@ -19,11 +19,14 @@ public class Consultation {
     private Long id;
 
     @Column
-    private Long patient_id;
+    private String patientName;
 
     @Column
-    private Long doctor_id;
+    private String doctorName;
 
-    @ElementCollection
-    private List<Integer> consultationHour;
+    @Column
+    private Integer startHour;
+
+    @Column
+    private Integer endHour;
 }

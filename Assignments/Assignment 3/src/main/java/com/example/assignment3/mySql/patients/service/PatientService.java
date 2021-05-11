@@ -8,10 +8,13 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import javax.persistence.EntityNotFoundException;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
 public class PatientService {
+
 
     private final PatientRepository patientRepository;
     private final PatientMapper patientMapper;
@@ -28,9 +31,9 @@ public class PatientService {
     public PatientDto update(Long id, PatientDto patient){
         Patient actPatient = findById(id);
         actPatient.setName(patient.getName());
-        actPatient.setIdentity_card_no(patient.getIdentityCardNo());
-        actPatient.setPersonal_num_code(patient.getPersonalNumCode());
-        actPatient.setDate_of_birth(patient.getDateOfBirth());
+        actPatient.setIdentityCardNo(patient.getIdentityCardNo());
+        actPatient.setPersonalNumCode(patient.getPersonalNumCode());
+        actPatient.setDateOfBirth(patient.getDateOfBirth());
         actPatient.setAddress(patient.getAddress());
 
         return patientMapper.toDto(patientRepository.save(actPatient));
@@ -39,4 +42,11 @@ public class PatientService {
     public void delete(Long id){
         patientRepository.deleteById(id);
     }
+
+    public List<PatientDto> findAll(){
+        return patientRepository.findAll().stream()
+                .map(patientMapper::toDto)
+                .collect(Collectors.toList());
+    }
+
 }

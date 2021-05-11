@@ -4,7 +4,7 @@ import router from "./router";
 import vuetify from "./plugins/vuetify";
 import "material-design-icons-iconfont/dist/material-design-icons.css";
 import "./api";
-import doctor_appointments from "./doctor_appointments";
+import doctor_appointments from "./store";
 
 Vue.config.productionTip = false;
 

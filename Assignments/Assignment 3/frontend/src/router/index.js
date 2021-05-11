@@ -3,7 +3,7 @@ import VueRouter from "vue-router";
 import UserList from "../views/UserList.vue";
 import PatientList from "../views/PatientList.vue";
 import ConsultationList from "../views/ConsultationList.vue";
-import { auth as doctor_appointments } from "../doctor_appointments/auth.module";
+import { auth as doctor_appointments } from "../store/auth.module";
 import Login from "../views/Login";
 import Admin from "../views/ConsultationList";
 

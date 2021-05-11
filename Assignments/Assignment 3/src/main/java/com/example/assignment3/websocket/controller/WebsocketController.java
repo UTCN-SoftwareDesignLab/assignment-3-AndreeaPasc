@@ -11,7 +11,7 @@ import org.springframework.web.util.HtmlUtils;
 public class WebsocketController {
 
     @MessageMapping("/message")
-    @SendTo("/topic/receive")
+    @SendTo("/consultations/receive")
     public ReceiveMessage greeting(Message message) throws Exception {
         Thread.sleep(1000); // simulated delay
         return new ReceiveMessage("Patient, " + HtmlUtils.htmlEscape(message.getPatientName()) + "has an appointment that starts at"
